@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-rounded: 'Nunito', sans-serif;
+
+    --background: 140 8% 7%;
+    --foreground: 120 20% 92%;
+
+    --card: 140 10% 11%;
+    --card-foreground: 120 20% 92%;
+
+    --popover: 140 10% 11%;
+    --popover-foreground: 120 20% 92%;
+
+    --primary: 120 98% 18.6%;
+    --primary-foreground: 120 20% 95%;
+
+    --secondary: 126 29% 37%;
+    --secondary-foreground: 120 20% 95%;
+
+    --muted: 140 8% 16%;
+    --muted-foreground: 120 8% 55%;
+
+    --accent: 120 98% 18.6%;
+    --accent-foreground: 120 20% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 140 10% 18%;
+    --input: 140 10% 18%;
+    --ring: 120 98% 18.6%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 140 10% 9%;
+    --sidebar-foreground: 120 20% 92%;
+    --sidebar-primary: 120 98% 18.6%;
+    --sidebar-primary-foreground: 120 20% 95%;
+    --sidebar-accent: 140 8% 16%;
+    --sidebar-accent-foreground: 120 20% 92%;
+    --sidebar-border: 140 10% 18%;
+    --sidebar-ring: 120 98% 18.6%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-rounded);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(120 98% 18.6%), hsl(126 29% 50%));
+  }
+
+  .glow-green {
+    box-shadow: 0 0 40px hsl(120 98% 18.6% / 0.3), 0 0 80px hsl(120 98% 18.6% / 0.1);
+  }
+
+  .bg-gradient-green {
+    background: linear-gradient(135deg, hsl(120 98% 18.6%), hsl(126 29% 37%));
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, hsl(140 8% 7%), hsl(140 10% 5%));
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(120 98% 18.6% / 0.4) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(120 98% 18.6% / 0.4);
+    border-radius: 3px;
+  }
+}
